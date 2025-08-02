@@ -71,9 +71,14 @@ console.log(autoMiste);
 /* Snack 2,
 A partire da un array di stringhe, crea un secondo array formattando le stringhe del primo array in minuscolo e con l’iniziale maiuscola. */
 
+const names_2 = ["giordania", "atlanta", "marte"];
+
+const formattedNames = names_2.map(name => {
+    return name[0].toUpperCase() + name.slice(1)
+})
 
 
-
+console.log(formattedNames);
 
 /* Snack 3,
 Crea un array di oggetti che rappresentano degli animali.
