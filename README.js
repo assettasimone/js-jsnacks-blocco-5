@@ -53,6 +53,10 @@ const nums = [2, 8, 4, 7, 12, 87];
 
 // Crea un array a partire dall'array nums, che abbia solo i numeri pari
 
+const numeriPari = nums.filter((num) => num % 2 === 0)
+console.log(numeriPari);
+
+
 
 const pencils = [
   { brand: 'Faber-Castell', weight: 8, sizeInCm: 12 },
@@ -68,6 +72,12 @@ const pencils = [
 ];
 
 // A partire dall'array fornito, crea due array. Uno con le matite lunghe almeno 15cm. L'altro con le restanti.
+
+const matiteLunghe = pencils.filter(pencil => pencil.sizeInCm >= 15)
+const matiteCorte = pencils.filter(pencil => pencil.sizeInCm < 15)
+
+console.log(matiteCorte);
+console.log(matiteLunghe);
 
 
 
@@ -94,6 +104,11 @@ const students = [
 
 // Recupera i dati dello studente con id 2
 
+const studentTrovato = students.filter(student => student.id == 2)
+
+console.log(studentTrovato);
+
+
 
 const students_2 = [
   {
@@ -117,3 +132,7 @@ const students_2 = [
 ];
 
 // Recuperare la classe dello studente Marco Lanci
+
+const studenteClasse = students_2.find((student) => student.name === "Marco Lanci")
+
+console.log(studenteClasse.classroom);
